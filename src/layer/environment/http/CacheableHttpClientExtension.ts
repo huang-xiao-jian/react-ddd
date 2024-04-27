@@ -1,4 +1,4 @@
-import { HttpExtensionProtocol } from '@/polymerizer/plugin';
+import { HttpExtensionProtocol } from '@/layer/plugin';
 import { setupCache } from 'axios-cache-interceptor';
 import { injectable } from 'inversify';
 import { startsWith } from 'lodash-es';
@@ -10,8 +10,9 @@ export class CacheableHttpClientExtension {
       return setupCache(client, {
         cachePredicate: {
           responseMatch(res) {
-            // only cache configurations: /api/config
-            return startsWith(res.config.url, '/api/config');
+            // cache configuration fetch: /api/config
+            // cache static assets
+            return startsWith(res.config.url, '/api/config') || startsWith(res.config.url, '/static');
           },
         },
       });

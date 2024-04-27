@@ -1,7 +1,7 @@
+import { BoundedContextLauncher } from '@/layer/environment';
 import { DocumentFundamentalModule } from '@/polymerizer/document-fundamental';
 import { DocumentTypeManifest, DocumentUploader } from '@/polymerizer/document/port';
 import { DocumentUploadDomainModule } from '@/polymerizer/document/upload';
-import { BoundedContextLauncher } from '@/polymerizer/lifecycle';
 import { Container } from 'inversify';
 import { DocumentMaterialReverter } from '../entities/DocumentMaterialReverter';
 import { DocumentTypeTransformer } from '../entities/DocumentTypeTransformer';

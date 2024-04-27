@@ -1,6 +1,6 @@
+import { BoundedContextLauncher } from '@/layer/environment';
 import { DocumentUploadIgniterView, DocumentUploadWorkspaceView } from '@/polymerizer/document-view/upload';
 import { DocumentUploadWorkspace } from '@/polymerizer/document/upload/Workspace';
-import { BoundedContextLauncher } from '@/polymerizer/lifecycle';
 import { App } from 'antd';
 import { useEvt } from 'evt/hooks';
 import { isError, map } from 'lodash-es';

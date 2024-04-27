@@ -1,4 +1,4 @@
-import { HttpExtensionProtocol } from '@/polymerizer/plugin';
+import { HttpExtensionProtocol } from '@/layer/plugin';
 import { injectable } from 'inversify';
 import { extend } from 'lodash-es';
 

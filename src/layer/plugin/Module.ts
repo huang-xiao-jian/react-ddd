@@ -1,6 +1,7 @@
 import { ContainerModule } from 'inversify';
-import { HttpExtensionProtocol } from './entity/Http';
-import { QiankunExtensionProtocol, QiankunMicroApplicationRegistry } from './entity/Qiankun';
+import { HttpExtensionProtocol } from './http';
+import { I18nExtensionProtocol } from './i18n';
+import { QiankunExtensionProtocol, QiankunMicroApplicationRegistry } from './qiankun';
 
 export class PluginModule {
   static create(): ContainerModule {
@@ -14,6 +15,10 @@ export class PluginModule {
       /* ==================================================== */
       bind(QiankunMicroApplicationRegistry).toSelf();
       bind(QiankunExtensionProtocol).toSelf();
+      /* ==================================================== */
+      /* =========== I18n ========== */
+      /* ==================================================== */
+      bind(I18nExtensionProtocol).toSelf();
     });
   }
 }

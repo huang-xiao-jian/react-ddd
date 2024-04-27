@@ -1,8 +1,8 @@
-import { HttpExtensionProtocol } from '@/polymerizer/plugin';
+import { HttpExtensionProtocol } from '@/layer/plugin';
 import axios, { Axios } from 'axios';
 import { AsyncContainerModule } from 'inversify';
-import { SecurityHttpClientExtension } from './extra/SecurityHttpClientExtension';
-import { CacheableHttpClientExtension } from './native/CacheableHttpClientExtension';
+import { CacheableHttpClientExtension } from './http/CacheableHttpClientExtension';
+import { SecurityHttpClientExtension } from './http/SecurityHttpClientExtension';
 
 export class EnvironmentModule {
   static create(protocol: HttpExtensionProtocol): AsyncContainerModule {
