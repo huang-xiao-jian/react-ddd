@@ -15,8 +15,8 @@ export class HttpInterceptorExtensionProtocol {
   public readonly response: AsyncSeriesHook<AxiosInterceptorManager<AxiosResponse>>;
 
   constructor() {
-    this.request = new AsyncSeriesHook();
-    this.response = new AsyncSeriesHook();
+    this.request = new AsyncSeriesHook(['interceptor']);
+    this.response = new AsyncSeriesHook(['interceptor']);
   }
 }
 
@@ -31,6 +31,6 @@ export class HttpExtensionProtocol {
   public readonly client: AsyncSeriesWaterfallHook<AxiosInstance, AxiosInstance>;
 
   constructor(public readonly interceptor: HttpInterceptorExtensionProtocol) {
-    this.client = new AsyncSeriesWaterfallHook();
+    this.client = new AsyncSeriesWaterfallHook(['axios']);
   }
 }

@@ -31,6 +31,7 @@ specifiers:
   prettier: ^3.2.1
   prettier-plugin-organize-imports: ^3.2.4
   prettier-plugin-packagejson: ^2.4.9
+  qiankun: ^2.10.16
   react: ^18.2.0
   react-dom: ^18.2.0
   react-if: ^4.1.5
@@ -62,6 +63,7 @@ dependencies:
   lodash-es: 4.17.21
   mobx: 6.12.0
   mobx-react-lite: 4.0.5_tew2cxsn3epqvaabosbtllz64e
+  qiankun: 2.10.16
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-if: 4.1.5_react@18.2.0
@@ -5037,6 +5039,12 @@ packages:
       resolve-from: 4.0.0
     dev: false
 
+  /import-html-entry/1.15.2:
+    resolution: {integrity: sha512-XXtXpGAq811qBgFVdOU6LoOC67rirwv7qwz/zuz1KxbpAM7QYX6kMvELOdSfhjZ9ntQnsdEOXT2zV7xMYaky6w==}
+    dependencies:
+      '@babel/runtime': 7.23.7
+    dev: false
+
   /import-local/3.1.0:
     resolution: {integrity: sha512-ASB07uLtnDs1o6EHjKpX34BKYDSqnFerfTOJL2HvMqF70LnxpjkzDB8J44oT9pu4AMPkQwf8jl6szgvNd2tRIg==}
     engines: {node: '>=8'}
@@ -7254,6 +7262,15 @@ packages:
   /pure-rand/6.0.4:
     resolution: {integrity: sha512-LA0Y9kxMYv47GIPJy6MI84fqTd2HmYZI83W/kM/SkKfDlajnZYfmXFTxkbY+xSBPkLJxltMa9hIkmdc29eguMA==}
 
+  /qiankun/2.10.16:
+    resolution: {integrity: sha512-Q3tSVUrPnzx8ckEOKIoPnhb5LE28FPKyan/r6jEuGJGqTbIy+3rp6E2/KfU82ZI4yZpef9LFTrnxdj49jAEsmw==}
+    dependencies:
+      '@babel/runtime': 7.23.7
+      import-html-entry: 1.15.2
+      lodash: 4.17.21
+      single-spa: 5.9.5
+    dev: false
+
   /qrcode.react/3.1.0_react@18.2.0:
     resolution: {integrity: sha512-oyF+Urr3oAMUG/OiOuONL3HXM+53wvuH3mtIWQrYmsXoAq0DkvZp2RYUWFSMFtbdOpuS++9v+WAkzNVkMlNW6Q==}
     peerDependencies:
@@ -8307,6 +8324,10 @@ packages:
 
   /signal-exit/3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
+
+  /single-spa/5.9.5:
+    resolution: {integrity: sha512-9SQdmsyz4HSP+3gs6PJzhkaMEg+6zTlu9oxIghnwUX3eq+ajq4ft5egl0iyR55LAmO/UwvU8NgIWs/ZyQMa6dw==}
+    dev: false
 
   /sirv/2.0.4:
     resolution: {integrity: sha512-94Bdh3cC2PKrbgSOUqTiGPWVZeSiXfKOVZNJniWoqrWrRkB1CJzBU3NEbiTsPcYy1lDsANA/THzS+9WBiy5nfQ==}
