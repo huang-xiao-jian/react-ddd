@@ -1,0 +1,1 @@
+export { ConfigAdaptorModule } from './Module';

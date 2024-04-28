@@ -1,2 +1,2 @@
 export { EnvironmentModule } from './Module';
-export { BoundedContextLauncher } from './di';
+export { OnLaunch } from './di';

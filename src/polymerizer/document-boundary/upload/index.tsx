@@ -1,4 +1,4 @@
-import { BoundedContextLauncher } from '@/layer/environment';
+import { OnLaunch } from '@/layer/environment';
 import { DocumentUploadIgniterView, DocumentUploadWorkspaceView } from '@/polymerizer/document-view/upload';
 import { DocumentUploadWorkspace } from '@/polymerizer/document/upload/Workspace';
 import { App } from 'antd';
@@ -34,8 +34,8 @@ const InternalBoundary: FC<InternalBoundaryProps> = ({ name, onCancel, onSuccess
     const container = DocumentUploadModule.create();
 
     await Promise.all(
-      map(container.getAll(BoundedContextLauncher), async (launcher) => {
-        await launcher.onBootstrap();
+      map(container.getAll(OnLaunch), async (launcher) => {
+        await launcher.onLaunch();
       }),
     );
 

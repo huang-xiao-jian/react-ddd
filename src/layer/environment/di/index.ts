@@ -1,1 +1,1 @@
-export { BoundedContextLauncher } from './Launcher';
+export { OnLaunch } from './Lifecycle';

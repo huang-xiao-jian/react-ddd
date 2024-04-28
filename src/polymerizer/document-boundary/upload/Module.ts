@@ -1,4 +1,4 @@
-import { BoundedContextLauncher } from '@/layer/environment';
+import { OnLaunch } from '@/layer/environment';
 import { DocumentFundamentalModule } from '@/polymerizer/document-fundamental';
 import { DocumentTypeManifest, DocumentUploader } from '@/polymerizer/document/port';
 import { DocumentUploadDomainModule } from '@/polymerizer/document/upload';
@@ -24,7 +24,7 @@ export class DocumentUploadModule {
     container.bind(DocumentTypeDeliverImpl).toSelf();
     container.bind(DocumentTypeManifest).toService(DocumentTypeDeliverImpl);
     container.bind(DocumentUploader).to(DocumentUploaderImpl);
-    container.bind(BoundedContextLauncher).to(DocumentUploadLauncher);
+    container.bind(OnLaunch).to(DocumentUploadLauncher);
 
     // domain
     container.load(DocumentUploadDomainModule.create());
