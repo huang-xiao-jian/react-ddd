@@ -1,4 +1,4 @@
-import { I18nExtensionProtocol } from '@/polymerizer/plugin';
+import { I18nExtensionProtocol } from '@/layer/plugin';
 import { injectable } from 'inversify';
 
 @injectable()

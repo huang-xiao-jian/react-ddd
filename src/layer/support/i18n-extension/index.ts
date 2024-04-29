@@ -1,0 +1,1 @@
+export { JapaneseOverridePlugin } from './JapaneseOverridePlugin';
