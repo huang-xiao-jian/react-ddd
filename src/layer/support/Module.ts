@@ -1,5 +1,4 @@
-import { Axios } from 'axios';
-import { AsyncContainerModule, ContainerModule } from 'inversify';
+import { ContainerModule } from 'inversify';
 import { BuiltinLanguagePlugin } from './i18n/BuiltinLanguagePlugin';
 import { I18nFetchPlugin } from './i18n/I18nFetchPlugin';
 import { JapaneseOverridePlugin } from './i18n/JapaneseOverridePlugin';
@@ -19,7 +18,7 @@ export class SupportExtensionModule {
 }
 
 export class SupportModule {
-  static create(http: Axios): AsyncContainerModule {
-    return new AsyncContainerModule(async (bind) => {});
+  static create(): ContainerModule {
+    return new ContainerModule(async (bind) => {});
   }
 }

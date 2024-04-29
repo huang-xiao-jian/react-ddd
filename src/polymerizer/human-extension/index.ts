@@ -1,0 +1,1 @@
+export { HumanExtensionModule } from './Module';

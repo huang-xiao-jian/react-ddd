@@ -1,5 +1,5 @@
+import { HumanBaseline } from '../../human/vo/Human';
 import { HumanBaselineExchangeAction } from './ExchangeAction';
-import { HumanBaseline } from './Human';
 
 interface MemorableHumanBaseline extends HumanBaseline {
   /**

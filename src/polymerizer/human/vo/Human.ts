@@ -2,7 +2,7 @@
 /* =========== 人力信息 ========== */
 /* ==================================================== */
 import { Evt } from 'evt';
-import { HumanBaselineExchangeAction } from './ExchangeAction';
+import { HumanBaselineExchangeAction } from '../../application/entity/ExchangeAction';
 
 /**
  * 个人基本信息
