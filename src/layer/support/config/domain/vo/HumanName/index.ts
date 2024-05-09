@@ -4,7 +4,7 @@ export type HumaneNameElement = 'first' | 'middle' | 'last' | 'full';
 export type HumaneNameElements = Set<HumaneNameElement>;
 
 declare module '../ConfigMappings' {
-  interface ConfigMappings {
+  export interface ConfigMappings {
     HumanName: HumaneNameElements;
   }
 }

@@ -1,8 +1,7 @@
 import { ConfigMappings } from '../ConfigMappings';
 
 declare module '../ConfigMappings' {
-  interface ConfigMappings {
-    'HumanUniqueness': Set<string>
+  export interface ConfigMappings {
+    HumanUniqueness: Set<string>;
   }
 }
-

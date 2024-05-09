@@ -1,9 +1,9 @@
+import { HumaneNameElements } from '@/layer/support/config/domain';
+import { FundamentalHumanNameElements } from '@/layer/support/config/fundamental';
 import { injectable } from 'inversify';
-import { HumaneNameElements } from '../../config-domain';
-import { FundamentalHumanNameElements } from '../../config-fundamental';
 
 @injectable()
-export class AdaptableHumanNameTransformer {
+export class HumanNameTransformer {
   transform(elements: FundamentalHumanNameElements): HumaneNameElements {
     const artifact = new Set(elements);
 

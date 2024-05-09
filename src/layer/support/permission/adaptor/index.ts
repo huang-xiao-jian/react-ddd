@@ -1,0 +1,1 @@
+export { PermissionAdaptorModule } from './Module';

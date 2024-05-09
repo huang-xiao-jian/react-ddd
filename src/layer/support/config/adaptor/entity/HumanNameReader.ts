@@ -1,7 +1,7 @@
+import { AtomicConfigReader, HumaneNameElements } from '@/layer/support/config/domain';
+import { FundamentalHumanNameReader } from '@/layer/support/config/fundamental';
 import { injectable } from 'inversify';
-import { AtomicConfigReader, HumaneNameElements } from '../../config-domain';
-import { FundamentalHumanNameReader } from '../../config-fundamental';
-import { AdaptableHumanNameTransformer } from './HumanNameTransformer';
+import { HumanNameTransformer } from './HumanNameTransformer';
 
 @injectable()
 export class AdaptableHumanNameReader extends AtomicConfigReader<'HumanName'> {
@@ -10,7 +10,7 @@ export class AdaptableHumanNameReader extends AtomicConfigReader<'HumanName'> {
 
   constructor(
     private readonly fundamental: FundamentalHumanNameReader,
-    private readonly transformer: AdaptableHumanNameTransformer,
+    private readonly transformer: HumanNameTransformer,
   ) {
     super();
   }

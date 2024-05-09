@@ -1,13 +1,13 @@
+import { AtomicConfigReader, ConfigReader } from '@/layer/support/config/domain';
 import { ContainerModule } from 'inversify';
-import { AtomicConfigReader, ConfigReader } from '../config-domain';
 import { AdaptableHumanNameReader } from './entity/HumanNameReader';
-import { AdaptableHumanNameTransformer } from './entity/HumanNameTransformer';
+import { HumanNameTransformer } from './entity/HumanNameTransformer';
 
 export class ConfigAdaptorModule {
   static create(): ContainerModule {
     return new ContainerModule((bind) => {
       // human name
-      bind(AdaptableHumanNameTransformer).toSelf();
+      bind(HumanNameTransformer).toSelf();
       // 使用单一入口绑定，context binding 便于聚合
       bind(AtomicConfigReader).to(AdaptableHumanNameReader).whenTargetNamed(AdaptableHumanNameReader.TARGET_NAME);
 

@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 import { injectable } from 'inversify';
-import { FundamentalHumanNameElements } from '../../config-fundamental';
+import { FundamentalHumanNameElements } from '../vo/HumanName';
 import { FundamentalConfigReader } from './ConfigReader';
 
 @injectable()
