@@ -15,7 +15,7 @@ export class HumanNameConnector extends FormilyConnector {
    * 异步阻塞获取姓名相关配置
    */
   @postConstruct()
-  async onLaunch(): Promise<any> {
+  private async onInit(): Promise<any> {
     this.elements = await this.configReader.read('HumanName');
   }
 

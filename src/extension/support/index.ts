@@ -1,0 +1,1 @@
+export { SupportExtensionModule } from './Module';

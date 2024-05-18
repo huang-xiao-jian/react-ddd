@@ -1,0 +1,1 @@
+export { EnvironmentExtensionModule } from './Module';

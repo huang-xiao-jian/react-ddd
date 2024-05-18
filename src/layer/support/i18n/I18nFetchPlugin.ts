@@ -1,5 +1,4 @@
-import { AcceptableLoadablePath, I18nExtensionProtocol, LanguageMatcher } from '@/layer/plugin';
-import { AxiosInstance } from 'axios';
+import { AcceptableLoadablePath, HttpService, I18nExtensionProtocol, LanguageMatcher } from '@/layer/plugin';
 import { injectable } from 'inversify';
 import { extend, forEach, isFunction, map } from 'lodash-es';
 
@@ -9,13 +8,13 @@ export class I18nFetchPlugin {
 
   constructor(
     private readonly protocol: I18nExtensionProtocol,
-    private readonly http: AxiosInstance,
+    private readonly http: HttpService,
   ) {}
 
   private async fetch(filepath: AcceptableLoadablePath, matcher: LanguageMatcher): Promise<{}> {
     const path = isFunction(filepath) ? filepath(matcher.lng, matcher.namespace) : filepath;
     const url = path.toString();
-    const response = await this.http.get(url);
+    const response = await this.http.client.get(url);
 
     return response.data;
   }

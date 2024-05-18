@@ -1,4 +1,4 @@
-import type { Axios, AxiosInterceptorManager, AxiosRequestConfig, AxiosResponse } from 'axios';
+import type { AxiosInstance, AxiosInterceptorManager, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { injectable } from 'inversify';
 import { AsyncSeriesHook, AsyncSeriesWaterfallHook } from 'tapable';
 
@@ -28,7 +28,7 @@ export class HttpExtensionProtocol {
    *   - 修改默认参数
    *   - 替换实现方式
    */
-  public readonly client: AsyncSeriesWaterfallHook<Axios, Axios>;
+  public readonly client: AsyncSeriesWaterfallHook<AxiosInstance, AxiosInstance>;
 
   constructor(public readonly interceptor: HttpInterceptorExtensionProtocol) {
     this.client = new AsyncSeriesWaterfallHook(['axios']);

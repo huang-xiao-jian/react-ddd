@@ -13,8 +13,3 @@ export abstract class ConfigReader {
     ...args: A
   ): Promise<ConfigMappingsReflector<A>>;
 }
-
-declare let cr1: ConfigReader;
-
-const s1 = cr1.read('timezone');
-const s2 = cr1.batchRead('timezone', 'dateFormat');

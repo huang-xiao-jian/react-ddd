@@ -1,1 +1,1 @@
-export { SupportExtensionModule, SupportModule } from './Module';
+export { SupportModule } from './Module';

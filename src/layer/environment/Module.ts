@@ -1,20 +1,13 @@
+import { HttpExtensionProtocol, HttpService } from '@/layer/plugin';
 import axios from 'axios';
 import { ContainerModule } from 'inversify';
-import { HttpExtensionProtocol, HttpService } from '../plugin/http';
 import { CacheableHttpClientExtension } from './http/CacheableHttpClientExtension';
-import { SecurityHttpClientExtension } from './http/SecurityHttpClientExtension';
 
 export class EnvironmentModule {
   static create(): ContainerModule {
     return new ContainerModule(async (bind) => {
-      /* ==================================================== */
-      /* =========== Http Plugins ========== */
-      /* ==================================================== */
       // 原生插件
       bind(CacheableHttpClientExtension).toSelf();
-      // TODO - 仅作为示例，具体插件扫描加载暂时搁置
-      // 扩展插件
-      bind(SecurityHttpClientExtension).toSelf();
       // 初始 HttpClient
       bind(HttpService)
         .toConstantValue({

@@ -1,1 +1,2 @@
-export { ConfigAdaptorModule } from './Module';
+export { AdaptableHumanNameReader } from './entity/HumanNameReader';
+export { HumanNameTransformer } from './entity/HumanNameTransformer';

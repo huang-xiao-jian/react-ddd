@@ -1,7 +1,8 @@
+import { SupportExtensionModule } from '@/extension/support';
 import { EnvironmentModule } from '@/layer/environment';
 import { AsyncLaunchGuardian } from '@/layer/environment/di';
 import { PluginModule } from '@/layer/plugin';
-import { SupportExtensionModule, SupportModule } from '@/layer/support';
+import { SupportModule } from '@/layer/support';
 import { Container } from 'inversify';
 
 export async function mount() {
