@@ -1,4 +1,3 @@
-export { FormExtensionProtocol } from './Form';
 export { PluginModule } from './Module';
 export { HttpExtensionProtocol, HttpService } from './http';
 export { I18nExtensionProtocol } from './i18n';

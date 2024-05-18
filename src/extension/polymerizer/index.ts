@@ -1,0 +1,1 @@
+export { PolymerizerExtensionModule } from './Module';

@@ -5,3 +5,8 @@ import { injectable } from 'inversify';
 export abstract class FormilyConnector {
   abstract connect(baseline?: FormPath): void;
 }
+
+@injectable()
+export abstract class FormilyConnectorExtension {
+  abstract decorate(basement: FormilyConnector): FormilyConnector;
+}

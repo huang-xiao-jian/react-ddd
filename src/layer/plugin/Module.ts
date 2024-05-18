@@ -1,5 +1,4 @@
 import { ContainerModule } from 'inversify';
-import { FormExtensionProtocol } from './Form';
 import { HttpExtensionProtocol, HttpInterceptorExtensionProtocol } from './http';
 import { I18nExtensionProtocol } from './i18n';
 import { QiankunExtensionProtocol } from './qiankun';
@@ -20,10 +19,6 @@ export class PluginModule {
       /* =========== I18n ========== */
       /* ==================================================== */
       bind(I18nExtensionProtocol).toSelf();
-      /* ==================================================== */
-      /* =========== Form ========== */
-      /* ==================================================== */
-      bind(FormExtensionProtocol).toSelf();
     });
   }
 }
